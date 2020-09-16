@@ -1,0 +1,180 @@
+\documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting  
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+\usepackage{makecell}                   %custom table cell
+\usepackage{pbox}                       %custom cell size
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Dr. SmallCaps]{Dr.}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Comment
+\usepackage{comment}
+
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE------------------------------------ %
+\par{\centering
+		{\Huge \textsc{Antunes-Neto}, José Parreiras
+	}\bigskip\par}
+
+% --------- PERSONAL DATA ------------------------------------ %
+\section{Personal Data}
+
+\begin{tabular}{rp{9.75cm}}
+    \textsc{Place and Date of Birth:} & Itabirito, Brazil  | April 3\textsuperscript{rd}  1996 \\
+    \textsc{Nationality:} & Brazilian\\
+    \textsc{Address:}   & Rua Belo Vale, 125, ZIP 35452-068, Itabirito, MG, Brazil \\
+    \textsc{Phone:}     & +55 31 989301667\\
+    \textsc{email:}     & \href{mailto:joseparreiras@gmail.com}{joseparreiras@gmail.com} \\
+    & \href{mailto:jose.neto@kellogg.northwestern.edu}{jose.neto@kellogg.northwestern.edu}
+\end{tabular}
+
+% --------- EDUCATION --------------------------------------- %
+
+\section{Education}
+\begin{tabular}{r|p{8.75cm}}	
+\textsc{Aug} 2020 - \textsc{Jun} 2025 (Expected) & Ph.D. in \textsc{Finance}, \normalsize\textbf{Kellogg School of Management - Northwestern University} \\
+\textsc{Jan} 2018 - \textsc{May} 2020 & M.Sc. in \textsc{Economics}, \normalsize\textbf{São Paulo School of Economics - FGV} \\
+& \normalsize \textsc{Thesis}: ``Estimating and Testing for Long Memory Common Features" | \small Advisor: Prof. Marcelo Fernandes \\ 
+&\normalsize \textsc{Gpa} (until Nov 2019): 8.53/10\hyperlink{msc_grades}{\hfill | \footnotesize Detailed List of Exams}\\
+\textsc{Jan} 2014 - \textsc{Dec} 2017& B.A. in \textsc{Economics}, \normalsize\textbf{IBMEC-MG}, Belo Horizonte \\
+& \footnotesize{Ranked among top 3 of class} \\
+& \normalsize \textsc{Thesis}: ``Analysis of the European Debt Evolution" | \small Advisor: Prof. Arilton Teixeira \\
+&\normalsize \textsc{Gpa}: 90.60/100\hyperlink{ba_grades}{\hfill | \footnotesize Detailed List of Exams}\\
+\end{tabular}
+
+% --------- RESEARCH --------------------------------------- %
+
+\section{Research Experience}
+\begin{tabular}{r|p{10.75cm}}
+\textsc{Oct 2018 - Feb 2019} & Research Assistant at Brazilian Federation of Banks (FEBRABAN) \\
+&\footnotesize{Research Assistant for Professors Pedro Valls Pereira (Center for Quantitative Studies in Economics and Finance - CEQEF/FGV) and Emerson Marçal (Center for Studies in Applied Macroeconomics - CEMAP/FGV)}\\
+&\footnotesize{\textsc{Description}: Database construction, model estimation and programming on the project ``Investigating the Dynamics of Lending and Money Market Interest Rates in Brazil: A closer look to disaggregated data".} \\
+\textsc{Oct 2018 - Feb 2019} & Research Assistant at B3 S.A. – Brasil, Bolsa, Balcão \\
+&\footnotesize{Research Assistant for Professors Marcelo Fernandes, Bruno Giovanetti and Fernando Chague - Sao Paulo School of Economics at Getulio Vargas Foundation and the Center for Quantitative Studies in Economics and Finance (CEQEF-FGV)} \\
+&\footnotesize{\textsc{Description}: Analysis of the brazilian stock market. Investigate the behaviour and model the arrival of high frequency traders.} 
+\end{tabular}
+
+% --------- TEACHING --------------------------------------- %
+
+\section{Teaching Experience}
+\begin{tabular}{r|p{10.5cm}}
+% Undergraduate
+% \textsc{Jul} 2014 - \textsc{Dec} 2014 & Macroeconomics I (TA, undergrad, IBMEC under Prof. Hélio Berni) \\
+% \textsc{Jan} 2015 - \textsc{Jun} 2015 & Macroeconomics I (TA, undergrad, IBMEC under Prof. Hélio Berni) \\
+% \textsc{Jul} 2015 - \textsc{Dec} 2015 & Macroeconomics I (TA, undergrad, IBMEC under Prof. Hélio Berni) \\
+% \textsc{Jan} 2016 - \textsc{Jun} 2016 & Econometrics I (TA, undergrad, IBMEC under Prof. Márcio Salvato) \\
+% Graduate
+\textsc{Oct} 2018 - \textsc{Nov} 2018 & Financial Econometrics \\
+& \footnotesize{Teaching Assistant for Prof. Pedro Valls} \\
+& \footnotesize{Graduate Course, Sao Paulo School of Economics - FGV} \\
+\textsc{Feb} 2019 - \textsc{Jun} 2019 & Econometrics I \\
+& \footnotesize{Teaching Assistant for Prof. Priscilla Albuquerque} \\
+& \footnotesize{Undergraduate Course, Sao Paulo School of Economics - FGV} \\
+\textsc{Feb} 2019 - \textsc{Mar} 2019 & Econometrics I \\
+& \footnotesize{Teaching Assistant for Prof. Bruno Ferman} \\
+& \footnotesize{Graduate Course, Sao Paulo School of Economics - FGV} \\
+\textsc{Apr} 2019 - \textsc{Jun} 2019 & Econometrics II \\
+& \footnotesize{Teaching Assistant for Prof. Bruno Giovannetti} \\
+& \footnotesize{Graduate Course, Sao Paulo School of Economics - FGV} \\
+\textsc{Aug} 2019 - \textsc{Nov} 2019 & Econometrics II \\
+& \footnotesize{Teaching Assistant for Prof. Raone Costa} \\
+& \footnotesize{Undergraduate Course, Sao Paulo School of Economics - FGV} \\
+\textsc{Aug} 2019 - \textsc{Nov} 2019 & Introduction to Data Science \\
+& \footnotesize{Teaching Assistant for Prof. Marcelo Fernandes} \\
+& \footnotesize{Undergraduate Course, Sao Paulo School of Economics - FGV} \\
+\end{tabular}
+
+% --------- SCHOLARSHIPS ------------------------------------ %
+\section{Scholarships and Awards}
+\begin{tabular}{r|p{10.5cm}}
+\textsc{Jan} 2018 - \textsc{Fev} 2018 & Graduate Research Fund by EESP-FGV\\
+ &\footnotesize{Scholarship granted by São Paulo School of Economics - FGV}
+ \\
+\textsc{Mar} 2018 - \textsc{Mar} 2020 & Graduate Research Fund by CAPES\\
+ &\footnotesize{Scholarship granted by Brazilian Federal Agency for Support and Evaluation of Graduate Education}
+\end{tabular}
+
+% --------- EXTRACURRICULAR --------------------------------- %
+
+\begin{comment}
+\section{Extracurricular Activities }
+\begin{tabular}{r|p{11cm}}
+ \textsc{Feb. 2013 - April 2015} & Director at \textsc{Bandeira Científica} \\&\footnotesize{Bandeira Científica is an interdisciplinary project created and conducted by University of São Paulo’s academic community aimed at providing medical aid and consulting in health care public policies to different cities across the country. As a Director, I was responsible for working closely to the administrative bodies from the cities we would visit to arrange for transportation, accomodation and work infrasctructure to the more than 150 members of the project. I also took part in a variety of specific activites, such as implementing an eletronic health record system in Ibatiba, Espírito Santo, Brazil.}\\\multicolumn{2}{c}{} \\
+  \textsc{Jan. 2014 - Dec. 2014} & Member of the \textsc{Student Union} \\&\footnotesize{Elected officer to represent the student body both internally and externally to the academic community. }\\\multicolumn{2}{c}{} \\
+\end{tabular}
+\end{comment}
+
+% --------- LANGUAGES -------------------------------------- %
+
+\section{Languages}
+\begin{tabular}{r|l}
+\textsc{Portuguese}& Mothertongue\\
+\textsc{English}&Proficient\\
+\textsc{Spanish}&Basic Knowledge
+\end{tabular}
+
+% --------- COMPUTER SKILLS -------------------------------- %
+\section{Computer Skills}
+\begin{tabular}{r|l}
+ Basic Knowledge& \textsc{Stata} \\
+ Intermediate Knowledge & {\fb \LaTeX }\setmainfont[SmallCapsFont=Fontin-SmallCaps.otf]{Fontin-SmallCaps.otf} \textsc{ and  EViews} \\
+ Advanced Knowledge & \textsc{R and Python}
+\end{tabular}
+
+\section{Academic References}
+\begin{tabular}{r|l}
+ Marcelo \textsc{Fernandes} & Full Professor at Sao Paulo School of Economics \\
+ & \small{\href{mailto:marcelo.fernandes@fgv.br}{marcelo.fernandes@fgv.br}} \\
+ Bruno \textsc{Ferman} & Associate Professor at Sao Paulo School of Economics \\
+ & \small{\href{mailto:bruno.ferman@fgv.br}{bruno.ferman@fgv.br}} \\
+ Gustavo \textsc{Fruet Dias} & Associate Professor at University of East Anglia \\
+ & \small{\href{mailto:g.fruet-dias@uea.ac.uk}{g.fruet-dias@uea.ac.uk}}
+\end{tabular}
+
+% --------- GRADES ---------------------------------------- %
+%\input{grades.tex}
+
+\end{document}
