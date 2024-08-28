@@ -15,7 +15,9 @@
 
 % Title ------------------------------------------------------------------------
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{3pt}{3pt}
+\titlespacing{\section}{0pt}{3pt}{5pt}
+\titleformat{\subsection}{\large\scshape\raggedright}{}{0em}{}[]
+\titlespacing{\subsection}{0pt}{0pt}{3pt}
 
 % Comment ----------------------------------------------------------------------
 \setlength{\TPHorizModule}{30mm}
@@ -23,3 +25,6 @@
 \textblockorigin{2mm}{0.65\paperheight}
 \setlength{\parindent}{0pt}
 \pagestyle{empty} % non-numbered pages
+
+% Margins ---------------------------------------------------------------------
+\geometry{bottom=0.5in, top=1in, left=1in, right=1in}
